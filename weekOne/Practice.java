@@ -1,62 +1,45 @@
 package weekOne;
 
-import java.util.LinkedList;
-import java.util.Scanner;
-import java.util.Stack;
-
 public class Practice {
 
     public static void main(String[] args) {
 
-        // Stack<Integer> stack = new Stack<Integer>();
-
-
-        // //  Write a Java program to find a missing number in an array. 
-        // //assume its sorted in ascending order
-        
-        // Scanner scanner = new Scanner(System.in);
-
-        // int[] randomArr = new int[50];
-        // for (int i = 0; i < args.length; i++) {
-        //     randomArr[i] = (int)(Math.random()*randomArr.length);
-        // }
-
-        
-        // findMissingNum(new int[]{1,4,5,6,7,8});
-
-        int myArray [] = {1, 3, 5};
-
-        System.out.println(myArray);
+        int[] digits = {1,4,2,1};
+        plusOne(digits);
 
     }
 
-    public static void findMissingNum(int[] numArray) {
+    /*
+     * Input: digits = [9]
+        Output: [1,0]
+        Explanation: The array represents the integer 9.
+        Incrementing by one gives 9 + 1 = 10.
+        Thus, the result should be [1,0].
+     */
 
-        int lowestNumer = numArray[0];
-        int secondLowestNumber = numArray[1];
-        int firstIncrement = secondLowestNumber - lowestNumer;
-        int secondIncr = numArray[2] - numArray[1];
-        int thirdIncr = numArray[3] - numArray[2];
-        int correctIncrement;
+    public static void plusOne(int[] digits) {
 
-        if(firstIncrement == secondIncr) {
-            correctIncrement = firstIncrement;
-        } else if(secondIncr == thirdIncr) {
-            correctIncrement = secondIncr;
-        } else {
-            correctIncrement = thirdIncr; // or the first
+        String number = "";
+        for (int i = 0; i < digits.length; i++) {
+            
+            number = number + digits[i];
+
         }
 
+        System.out.println(number);
 
-        for (int i = 0; i < numArray.length-1; i++) {
-            if(numArray[i] != numArray[i+correctIncrement]-1) {
-                if(i == 0) {
-                    
-                    System.out.println(numArray[i] + correctIncrement);
+        int stringNumber = Integer.parseInt(number);
+        stringNumber++;
 
-                }
-                System.out.println(numArray[i] + correctIncrement);
-            }
+        String backtOString = Integer.toString(stringNumber);
+
+        int[] newArr = new int[backtOString.length()];
+        for (int i = 0; i < backtOString.length(); i++) {
+            newArr[i] = (int) backtOString.charAt(i);
+        }
+
+        for (int i = 0; i < newArr.length; i++) {
+            System.out.print(newArr[i] + ",");
         }
 
     }

@@ -41,10 +41,11 @@ public class Lab2 {
         int totalOfFactors = 0;
         for (int i = 1; i < userInput; i++) {
 
-            if (isFactor(userInput, i)) {
+            if (isFactor(i, userInput)) {
 
-                totalOfFactors += i;
+                totalOfFactors = totalOfFactors + i;
             }
+            
         }
 
         if (totalOfFactors == userInput) {
