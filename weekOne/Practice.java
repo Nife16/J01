@@ -1,11 +1,16 @@
 package weekOne;
 
+import java.util.Scanner;
+
 public class Practice {
 
     public static void main(String[] args) {
 
-        int[] digits = {1,4,2,1};
-        plusOne(digits);
+       Scanner scr1 = new Scanner(System.in);
+       
+       Scanner scr2 = new Scanner(System.in);
+
+       int nextInt = scr1.nextInt();
 
     }
 
