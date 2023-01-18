@@ -26,7 +26,14 @@ public class Product {
         this.name = name;
     }
 
-    public Double getPrice() {
+    public Double getPrice(Integer age) {
+
+        if(age < 13) {
+
+            return price*.7;
+
+        }
+
         return price;
     }
 

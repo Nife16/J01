@@ -1,4 +1,4 @@
-package notes.Inheritance;
+package weekTwo.notes.Inheritance;
 
 
 /*

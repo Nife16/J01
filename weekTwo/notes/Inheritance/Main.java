@@ -1,4 +1,4 @@
-package notes.Inheritance;
+package weekTwo.notes.Inheritance;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,10 +18,13 @@ public class Main {
          Child child = new Child();
          GrandChild lilOne = new GrandChild();
 
+        Fish fishy = new Fish();
+        fishy.eat();
+
          // Here child is using the method getBank that was made in Parent
          // through inheritance. Even though it doesn't have the method getBank on its own class
          // it can use the Parents method
-         System.out.println(child.getBank());
+        //  System.out.println(child.getBank());
 
         /*
          * Here you can see even a child of the child class can inherit and the functionality

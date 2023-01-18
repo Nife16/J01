@@ -1,4 +1,4 @@
-package notes.Inheritance;
+package weekTwo.notes.Inheritance;
 
 
 /* This class will function as the Parent that is going to be extended form */
