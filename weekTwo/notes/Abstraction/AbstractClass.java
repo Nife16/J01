@@ -1,7 +1,7 @@
-package notes.Abstraction;
+package weekTwo.notes.Abstraction;
 
 public abstract class AbstractClass {
 
-    abstract public void method();
+    abstract public void method(int number);
     
 }

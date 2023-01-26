@@ -1,0 +1,19 @@
+
+.big-red {
+    color: rgb(177, 14, 14) !important;
+    font-size: 100px;
+    font-weight: 900;
+
+    border: 10px solid rebeccapurple;
+    /* border-width: 10px;
+    border-style: solid;
+    border-color: rebeccapurple; */
+    margin: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.link-text {
+    text-decoration: none;
+    color: lightsalmon;
+}

@@ -1,0 +1,156 @@
+html body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Roboto,Arial,sans-serif;
+}
+
+*:not(head) {
+    display: flex;
+}
+
+.header {
+    height: 8%;
+}
+
+.main-content {
+    height: 85%;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.third-width {
+    width: 33%;
+}
+
+.links {
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+    align-items: center;
+
+}
+
+.content-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-right {
+    justify-content: right;
+}
+
+.circle-initial {
+    background-color: mediumaquamarine;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+    margin: 20px;
+}
+
+.search-box {
+    height: 44px;
+    width: 582px;
+    border: 1px solid lightgrey;
+    border-radius: 30px;
+    margin: 30px;
+}
+
+.search-box:hover {
+    box-shadow: 5px 10px 10px #d8d8d8;
+}
+
+.icon-size {
+    width: 24px;
+    height: 24px;
+    padding-left: 15px;
+}
+
+.image {
+    height: 92px;
+    width: 272px;
+    margin: 0 auto;
+}
+
+.mag-glass {
+    width: 10%;
+    align-items: center;
+}
+
+.search-input {
+    width: 75%;
+}
+
+.input-box {
+    border: none;
+    width: 100%;
+}
+
+.input-box:focus {
+    outline: none;
+}
+
+.color-icons {
+    width: 15%;
+    align-items: center;
+    justify-content: right;
+    padding-right: 15px;
+}
+
+.button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: Roboto,arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    /* line-height: 22px; */
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+}
+
+.button:hover {
+    border: 1px solid lightgrey;
+    box-shadow: 5px 10px 10px #d8d8d8;
+}
+
+.footer {
+    height: 7%;
+    background-color: #f2f2f2;
+}
+
+.link-spacer {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #70757a;
+}
+
+.space-apart {
+    margin-right: 8px;
+}

@@ -1,4 +1,4 @@
-package notes.Abstraction;
+package weekTwo.notes.Abstraction;
 
 public interface Animal {
 
