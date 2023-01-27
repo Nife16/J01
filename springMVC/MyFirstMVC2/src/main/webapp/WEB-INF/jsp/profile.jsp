@@ -11,6 +11,6 @@
     <link rel="stylesheet" href="/css/profile.css">
 </head>
 <body class="blue">
-    <a href="/">${name}</a>
+    <a href="/">${account.getName()}</a>
 </body>
 </html>
