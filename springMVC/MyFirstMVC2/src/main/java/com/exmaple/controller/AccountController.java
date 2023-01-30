@@ -48,12 +48,14 @@ public class AccountController {
     // Post mappings are for when you are taking a model attribute from a form
     // and sending it to the Database to be stored
     @PostMapping("/signUp")
-    public String signUp(@ModelAttribute Account personSigningUp) {
+    public String signUp(@ModelAttribute Account personSigningUp, Model model) {
 
         // Send the signed up person to the service to be stored in the list
         accountService.signUp(personSigningUp);
 
-        return "home";
+        model.addAttribute("userSignIn", new Account());
+
+        return "signIn";
 
     }
 

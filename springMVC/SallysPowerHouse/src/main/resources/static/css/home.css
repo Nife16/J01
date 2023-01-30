@@ -1,0 +1,54 @@
+html body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+*:not(head) {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.header {
+    height: 8%;
+    justify-content: right;
+    background-color: rgb(235,147,115);
+}
+
+.main-content {
+    height: 92%;
+}
+
+.header-links {
+    margin: 10px;
+    text-decoration: none;
+    align-items: center;
+}
+
+.hamburger {
+    align-items: center;
+    margin-right: 30px;
+    width: 75px;
+    justify-content: center;
+}
+
+.dropdown {
+    position: fixed;
+    visibility:hidden;
+    margin-top: 9%;
+    width: 100px;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.hamburger:hover .dropdown {
+    visibility:visible;
+    background-color: rgb(235,147,115);
+}
