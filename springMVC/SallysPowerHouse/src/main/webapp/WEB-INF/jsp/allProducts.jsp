@@ -10,6 +10,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Document</title>
                 <link rel="stylesheet" href="/css/home.css">
+                <link rel="stylesheet" href="/css/products.css">
                 <script src="https://kit.fontawesome.com/d8359c02fc.js" crossorigin="anonymous"></script>
             </head>
 
@@ -38,7 +39,11 @@
 
                 </div>
                 <div class="main-content">
-                    
+                    <c:forEach items="${allProducts}" var="product">
+                        <div class="box">
+                            ${product.name}
+                        </div>
+                    </c:forEach>
                 </div>
             </body>
 

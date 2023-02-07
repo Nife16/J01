@@ -19,11 +19,13 @@ html body {
 .header {
     height: 8%;
     justify-content: right;
-    background-color: rgb(235,147,115);
+    background-color: #eb9475;
 }
 
 .main-content {
     height: 92%;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-links {

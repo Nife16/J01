@@ -15,7 +15,7 @@
 
             <body class="flex-col">
                 <div class="header flex-row">
-                    
+
                     <div class="hamburger flex-col">
                         <i class="fa-solid fa-bars fa-xl"></i>
                         <c:choose>
@@ -38,7 +38,29 @@
 
                 </div>
                 <div class="main-content">
-                    
+                    <form:form modelAttribute="account" action="/profile/${account.id}/${account.address.id}" method="post">
+                        <div class="sign-up-box flex-col">
+                            <h1>Account Info!!!!</h1>
+                            <label>Name</label>
+                            <form:input type="text" class="" path="name" />
+                            <label>Phone Number</label>
+                            <form:input type="text" class="" path="phoneNumber" />
+                            <label>Email</label>
+                            <form:input type="text" class="" path="email" />
+                            <label>Password</label>
+                            <form:input type="password" class="" path="password" />
+                            <h1>Address!!!!</h1>
+                            <label>Street</label>
+                            <form:input type="text" class="" path="address.street" />
+                            <label>City</label>
+                            <form:input type="text" class="" path="address.city" />
+                            <label>State</label>
+                            <form:input type="text" class="" path="address.state" />
+                            <label>Zip Code</label>
+                            <form:input type="text" class="" path="address.zipCode" />
+                            <form:button type="submit">SUBMIT</form:button>
+                        </div>
+                    </form:form>
                 </div>
             </body>
 
