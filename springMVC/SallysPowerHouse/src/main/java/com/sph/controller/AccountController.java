@@ -1,5 +1,11 @@
 package com.sph.controller;
 
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +16,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.sph.entity.Account;
-import com.sph.entity.Address;
+import com.sph.entity.*;
 import com.sph.service.AccountService;
 import com.sph.service.AddressService;
+import com.sph.service.CartService;
 
 @Controller
 public class AccountController {
@@ -24,9 +30,13 @@ public class AccountController {
     @Autowired
     AddressService addressService;
 
+    @Autowired
+    CartService cartService;
+
     
     @GetMapping("/")
     public String index(Model model, HttpSession session) {
+
 
         String email = (String) session.getAttribute("email");
 
@@ -54,7 +64,8 @@ public class AccountController {
     public String signUp(@ModelAttribute Account account, HttpSession session, Model model) {
 
         Address blankAddressWithId = addressService.save(new Address());
-        Account signedInAccount = accountService.save(account, blankAddressWithId);
+        Cart cart = cartService.save(new Cart());
+        Account signedInAccount = accountService.save(account, blankAddressWithId, cart);
 
         session.setAttribute("email", signedInAccount.getEmail());
 

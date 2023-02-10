@@ -1,5 +1,7 @@
 package com.sph.entity;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,6 +26,10 @@ public class Product {
     
     @Column(name = "description")
     String description;
+    
+
+    @Column(name = "date_created")
+    LocalDateTime dateCreated = LocalDateTime.now();
 
     public Product() {
     }
@@ -37,7 +43,12 @@ public class Product {
     }
 
     public Double getPrice() {
-        return price;
+
+        if(LocalDateTime.now().isAfter(dateCreated.plusDays(120))) {
+            return this.price*.90;
+        }
+
+        return this.price;
     }
 
     public void setPrice(Double price) {
@@ -62,7 +73,16 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product [id=" + id + ", price=" + price + ", name=" + name + ", description=" + description + "]";
+        return "Product [id=" + id + ", price=" + price + ", name=" + name + ", description=" + description
+                + ", dateCreated=" + dateCreated + "]";
+    }
+
+    public LocalDateTime getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(LocalDateTime dateCreated) {
+        this.dateCreated = dateCreated;
     }
     
 }

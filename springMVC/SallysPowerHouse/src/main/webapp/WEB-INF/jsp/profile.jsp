@@ -24,6 +24,8 @@
                                     <a href="/" class="header-links">Home</a>
                                     <a href="/signOut" class="header-links">Sign Out</a>
                                     <a href="/profile" class="header-links">Profile</a>
+                                    <a href="/allProducts" class="header-links">All Products</a>
+                                    <a href="/cart" class="header-links">Cart</a>
                                 </div>
                             </c:when>
                             <c:otherwise>

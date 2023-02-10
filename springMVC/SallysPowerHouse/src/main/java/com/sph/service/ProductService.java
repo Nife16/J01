@@ -20,4 +20,10 @@ public class ProductService {
 
     }
 
+    public Product findById(Integer productId) {
+
+        return productRepo.findById(productId).get();
+
+    }
+
 }

@@ -25,6 +25,8 @@
                                     <a href="/" class="header-links">Home</a>
                                     <a href="/signOut" class="header-links">Sign Out</a>
                                     <a href="/profile" class="header-links">Profile</a>
+                                    <a href="/allProducts" class="header-links">All Products</a>
+                                    <a href="/cart" class="header-links">Cart</a>
                                 </div>
                             </c:when>
                             <c:otherwise>
@@ -40,8 +42,11 @@
                 </div>
                 <div class="main-content">
                     <c:forEach items="${allProducts}" var="product">
-                        <div class="box">
-                            ${product.name}
+                        <div class="box flex-col">
+                            <div>${product.name}</div>
+                            <div>Price:$ ${product.price}</div>
+                            <div>Description: ${product.description}</div>
+                            <a href="/cart/${product.id}" class="buy-link">Add to Cart</a>
                         </div>
                     </c:forEach>
                 </div>

@@ -64,6 +64,15 @@ public class Cart {
         return "Cart [id=" + id + ", products=" + products + "]";
     }
 
-    
+    public Double getTotalPriceOfCart() {
+        
+        Double totalPrice = 0.0;
 
+        for (int i = 0; i < this.products.size(); i++) {
+            totalPrice += this.products.get(i).getPrice();
+            // totalPrice = totalPrice + this.products.get(i).getPrice();
+        }
+
+        return totalPrice;
+    }
 }

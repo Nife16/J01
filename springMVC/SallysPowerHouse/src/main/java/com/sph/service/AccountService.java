@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.sph.entity.Account;
 import com.sph.entity.Address;
+import com.sph.entity.Cart;
 import com.sph.repo.AccountRepo;
 
 @Service
@@ -13,8 +14,9 @@ public class AccountService {
     @Autowired
     AccountRepo accountRepo;
 
-    public Account save(Account account, Address blankAddressWithId) {
+    public Account save(Account account, Address blankAddressWithId, Cart cart) {
 
+        account.setCart(cart);
         account.setAddress(blankAddressWithId);
 
         return accountRepo.save(account);

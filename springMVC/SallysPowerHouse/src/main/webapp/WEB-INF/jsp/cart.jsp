@@ -10,12 +10,13 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Document</title>
                 <link rel="stylesheet" href="/css/home.css">
+                <link rel="stylesheet" href="/css/products.css">
                 <script src="https://kit.fontawesome.com/d8359c02fc.js" crossorigin="anonymous"></script>
             </head>
 
             <body class="flex-col">
                 <div class="header flex-row">
-                    
+
                     <div class="hamburger flex-col">
                         <i class="fa-solid fa-bars fa-xl"></i>
                         <c:choose>
@@ -39,8 +40,22 @@
                     </div>
 
                 </div>
-                <div class="main-content">
-                    
+                <div class="main-content flex-col">
+                    <div class="flex-row flex-wrap">
+                        <c:forEach items="${account.cart.products}" var="product">
+                            <div class="box flex-col">
+                                <div>${product.name}</div>
+                                <div>Price:$ ${product.price}</div>
+                                <div>Description: $ ${product.description}</div>
+                            </div>
+                        </c:forEach>
+                    </div>
+                    <div class="flex-row">
+                        <a href="">Buy Me</a>
+                    </div>
+                    <div class="flex-row">
+                        <div>Total Price: $ ${account.cart.getTotalPriceOfCart()}</div>
+                    </div>
                 </div>
             </body>
 
