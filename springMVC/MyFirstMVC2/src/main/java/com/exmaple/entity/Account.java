@@ -1,8 +1,11 @@
 package com.exmaple.entity;
 
 
+// This is your Entity, for creating obejcts to be stored
 public class Account {
 
+    // MAKE YOUR VARIABLES PRIVATE (encapsulation)
+    // AND ALWAYS USE CLASS VERSIONS OF DATATYPES
     private Long id;
     private String name;
     private String password;

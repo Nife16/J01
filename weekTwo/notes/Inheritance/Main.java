@@ -14,12 +14,14 @@ public class Main {
          */
 
 
-         Parent mom = new Parent();
-         Child child = new Child();
-         GrandChild lilOne = new GrandChild();
+        //  Parent mom = new Parent();
+        //  Child child = new Child();
+        //  GrandChild lilOne = new GrandChild();
 
         Fish fishy = new Fish();
-        fishy.eat();
+        Tiger tiggy = new Tiger();
+        tiggy.breathe();
+        fishy.breathe();
 
          // Here child is using the method getBank that was made in Parent
          // through inheritance. Even though it doesn't have the method getBank on its own class
@@ -31,7 +33,7 @@ public class Main {
          * of the Parent class is passed down through the Child to the GrandChild class
          * This is called multilevel Inheritance
          */
-         System.out.println(lilOne.getBank());
+        //  System.out.println(lilOne.getBank());
 
     }
     

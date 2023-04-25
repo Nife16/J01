@@ -4,8 +4,6 @@ public class Fish extends Animal {
 
     public Fish(){ super(); }
     
-    public void eat() { System.out.println("Bloop bloop");}
-    
-    public void eat(String food) { System.out.println("Bloop bloop : " +  food);}
+    public void breathe() {System.out.println("bloop bloop");}
     
 }

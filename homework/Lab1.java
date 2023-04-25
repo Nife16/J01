@@ -6,13 +6,10 @@ public class Lab1 {
 
     public static void main(String[] args) {
         
-    	System.out.println("WE HERE");
         String string = circle();
 
         System.out.println(string);
     }
-
-
 
     
 
@@ -31,8 +28,9 @@ public class Lab1 {
 
         double circumference = 2*pi*radius;
 
-
         scanner.close();
+
+        System.out.println("Area: " + area + ", Circumference: " +  circumference);
         
         return "Area: " + area + ", Circumference: " +  circumference;
         
@@ -137,6 +135,8 @@ public class Lab1 {
         System.out.print("What is the year -> ");
         int year = scanner.nextInt();
         
+        boolean isDivisibleByFour = year%4 == 0;
+
         if(year%4 == 0) {
         	
         	if(year%100 == 0) {

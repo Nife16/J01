@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.exmaple.entity.Account;
 import com.exmaple.service.AccountService;
-import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
 /* All Controllers must be annotated with @Controller!
  * This lets your component scan know that
@@ -23,12 +22,15 @@ public class AccountController {
     AccountService accountService;
 
     /*
-     * GetMapping it is descibing me going to a page
+     * GetMapping is when you are going straight to a url, not through a button
      * When i go to http://localhost:8080/ in my browser,
      * my GetMapping will return the home.jsp
      */
     @GetMapping("/")
     public String index() {
+        // Inside of the mappings, you need do your logic to set up your page
+        // It just so happens that in this case, we dont need any
+        // but look below and generally you will see that you do
         return "home";
     }
 

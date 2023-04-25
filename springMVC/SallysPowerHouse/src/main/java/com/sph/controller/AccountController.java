@@ -1,11 +1,5 @@
 package com.sph.controller;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-
-
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +30,6 @@ public class AccountController {
     
     @GetMapping("/")
     public String index(Model model, HttpSession session) {
-
 
         String email = (String) session.getAttribute("email");
 

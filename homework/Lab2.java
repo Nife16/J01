@@ -5,9 +5,9 @@ public class Lab2 {
 
     public static void main(String[] args) {
 
-        middle3(42,7,6);
-        xor(true, false);
-        isFactor(3, 43);
+        // middle3(42,7,6);
+        // xor(true, false);
+        // isFactor(3, 43);
 
         Scanner scr = new Scanner(System.in);
         
@@ -26,7 +26,7 @@ public class Lab2 {
 
         for (int index = 2; index < numberToCheckForPrime; index++) {
 
-            if (isFactor(index, numberToCheckForPrime)) {
+            if (isFactor(numberToCheckForPrime, index)) {
                 System.out.println("NOT PRIME");
                 return false;
             }
@@ -41,9 +41,10 @@ public class Lab2 {
         int totalOfFactors = 0;
         for (int i = 1; i < userInput; i++) {
 
-            if (isFactor(i, userInput)) {
+            if (isFactor(userInput, i)) {
 
                 totalOfFactors = totalOfFactors + i;
+                // totalOfFactors += i;
             }
             
         }
@@ -56,9 +57,9 @@ public class Lab2 {
 
     }
 
-    public static boolean isFactor(int denomenator, int numerator) {
+    public static boolean isFactor(int numerator, int denomenator) {
 
-        if (numerator % denomenator == 0) {
+        if (denomenator % numerator == 0) {
             System.out.println("Is a factor, True");
             return true;
         } else {
@@ -70,7 +71,7 @@ public class Lab2 {
 
     public static void xor(boolean bool1, boolean bool2) {
 
-        if (bool1 ^ bool2) {
+        if (bool1 != bool2) {
             System.out.println("True");
         } else {
             System.out.println("False");
